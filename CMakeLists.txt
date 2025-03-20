@@ -18,13 +18,19 @@ set(GLAD_SRC ${DEP_DIR}/glad/src/glad.c)
 add_library(glad STATIC ${GLAD_SRC})
 target_include_directories(glad PUBLIC ${DEP_DIR}/glad/include)
 
+set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+add_subdirectory(${DEP_DIR}/glfw)
+
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-target_link_libraries(${PROJECT_NAME} PRIVATE glad)
+target_link_libraries(${PROJECT_NAME} PRIVATE glad glfw)
 
 target_include_directories(${PROJECT_NAME} PRIVATE 
     ${SRC_DIR}
     ${DEP_DIR}/glad/include
+    ${DEP_DIR}/glfw/include
 )
 
 add_custom_target(copy_assets ALL
