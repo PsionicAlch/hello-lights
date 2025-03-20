@@ -2,7 +2,7 @@
 
 This is a small project created for the purpose of practicing what I've learned in [LearnOpenGL](https://learnopengl.com/Lighting/Basic-Lighting). It showcases the use of 6 individual light sources to light a single cube whilst the light sources are moving. The light model is the Phong lighting model.
 
-![GIF of project running]("https://github.com/PsionicAlch/hello-lights/blob/main/assets/screenshots/screenshot.gif")
+![GIF of project running](https://github.com/PsionicAlch/hello-lights/blob/main/assets/screenshots/screenshot.gif)
 
 ## Build Instructions for Hello Lights
 
@@ -16,8 +16,8 @@ Before building, ensure you have the required dependencies:
 
 #### Window:
 
-- Install [CMake]("https://cmake.org/")
-- Install [Visual Studio]("https://visualstudio.microsoft.com/") with the C++ Development Tools **OR** Install [MinGW-w64]("https://www.mingw-w64.org/") for MinGW builds
+- Install [CMake](https://cmake.org/)
+- Install [Visual Studio](https://visualstudio.microsoft.com/) with the C++ Development Tools **OR** Install [MinGW-w64](https://www.mingw-w64.org/) for MinGW builds
 
 #### MacOS (Using Homebrew):
 
