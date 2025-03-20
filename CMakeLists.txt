@@ -23,14 +23,17 @@ set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 add_subdirectory(${DEP_DIR}/glfw)
 
+add_subdirectory(${DEP_DIR}/glm)
+
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-target_link_libraries(${PROJECT_NAME} PRIVATE glad glfw)
+target_link_libraries(${PROJECT_NAME} PRIVATE glad glfw glm)
 
 target_include_directories(${PROJECT_NAME} PRIVATE 
     ${SRC_DIR}
     ${DEP_DIR}/glad/include
     ${DEP_DIR}/glfw/include
+    ${DEP_DIR}/glm
 )
 
 add_custom_target(copy_assets ALL
