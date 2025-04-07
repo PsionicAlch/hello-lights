@@ -104,13 +104,15 @@ build/output/HelloLights
 **Windows**
 
 ```bash
-output\HelloLights.exe
+cd output
+HelloLights.exe
 ```
 
 **MacOS/Linux**
 
 ```bash
-./output/HelloLights
+cd output
+./HelloLights
 ```
 
 ### Step 7. Keeping the Repository Updated
